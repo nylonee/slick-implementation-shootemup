@@ -1,0 +1,79 @@
+
+public class Stats {
+	
+	public String[][] dataGrid = new String[7][7];
+
+	public Stats() {
+		// Enters the names of each unit recognized in the game
+		dataGrid[0][0] = "player*";
+		dataGrid[1][0] = "fighter";
+		dataGrid[2][0] = "drone";
+		dataGrid[3][0] = "asteroid";
+		dataGrid[4][0] = "boss";
+		dataGrid[5][0] = "missile (blue)";
+		dataGrid[6][0] = "missile (red)";
+		
+		// Enter the speeds of each unit
+		dataGrid[0][6] = "0.4"; // Player Speed
+		dataGrid[1][6] = "0.2"; // Fighter Speed
+		dataGrid[2][6] = "0.0005"; // Drone Speed
+		dataGrid[3][6] = "0.2"; // Asteroid Speed
+		dataGrid[4][6] = "0.2"; // Boss Speed
+		dataGrid[5][6] = "0.7"; // Blue Missile Speed
+		dataGrid[6][6] = "0.7"; // Red Missile Speed
+	}
+	
+	private int returnPosition(String unit) {
+		unit = unit.toLowerCase();
+		for(int i = 0; i < 7; i++) {
+			if(dataGrid[i][0].equals(unit))
+					return i;
+		}
+		System.err.print("Could not find unit in stats file");
+		return -1;
+	}
+	
+	public void addImage(String unit, String path) {
+		dataGrid[returnPosition(unit)][1] = path;
+	}
+	
+	public void addKind(String unit, String kind) {
+		dataGrid[returnPosition(unit)][2] = kind;
+	}
+	
+	public void addShield(String unit, String shield) {
+		dataGrid[returnPosition(unit)][3] = shield;
+	}
+
+	public void addDamage(String unit, String damage) {
+		dataGrid[returnPosition(unit)][4] = damage;
+	}
+	
+	public void addFirepower(String unit, String firepower) {
+		dataGrid[returnPosition(unit)][5] = firepower;
+	}
+	
+	public String getImage(String unit) {
+		return dataGrid[returnPosition(unit)][1];
+	}
+	
+	public String getKind(String unit) {
+		return dataGrid[returnPosition(unit)][2];
+	}
+	
+	public int getShield(String unit) {
+		return Integer.parseInt(dataGrid[returnPosition(unit)][3]);
+	}
+	
+	public double getDamage(String unit) {
+		return Double.parseDouble(dataGrid[returnPosition(unit)][4]);
+	}
+	
+	public int getFirepower(String unit) {
+		return Integer.parseInt(dataGrid[returnPosition(unit)][5]);
+	}
+	
+	public double getSpeed(String unit) {
+		return Double.parseDouble(dataGrid[returnPosition(unit)][6]);
+	}
+}

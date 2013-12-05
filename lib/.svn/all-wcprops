@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/users/nmirpuri/!svn/ver/19/oosd/project2/lib
+END
+lwjgl.jar
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/users/nmirpuri/!svn/ver/19/oosd/project2/lib/lwjgl.jar
+END
+slick.jar
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/users/nmirpuri/!svn/ver/19/oosd/project2/lib/slick.jar
+END
+jinput-raw_64.dll
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/users/nmirpuri/!svn/ver/19/oosd/project2/lib/jinput-raw_64.dll
+END
+lwjgl64.dll
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/users/nmirpuri/!svn/ver/19/oosd/project2/lib/lwjgl64.dll
+END
+OpenAL64.dll
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/users/nmirpuri/!svn/ver/19/oosd/project2/lib/OpenAL64.dll
+END
+jinput-dx8_64.dll
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/users/nmirpuri/!svn/ver/19/oosd/project2/lib/jinput-dx8_64.dll
+END
